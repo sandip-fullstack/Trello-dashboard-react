@@ -1,0 +1,19 @@
+.Header-main {
+    height: 75px;
+    padding: 20px;
+    color: var(--header-fg-color);
+    background: var(--header-bg-color);
+  }
+
+  .Header-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  .Header-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-left: 30px;
+  }

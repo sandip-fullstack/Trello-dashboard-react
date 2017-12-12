@@ -1,0 +1,242 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  /* stylelint-disable value-list-comma-newline-after */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  /* stylelint-enable */
+  color: black;
+  background: white;
+  font-size: 16px;
+}
+
+html {
+  --outline-color: #008cff;
+  --outline-style: 2px 2px 0.2rem var(--outline-color),
+    -2px -2px 0.2rem var(--outline-color);
+  --border-color: #888;
+  --page-bg-color: white;
+
+  /* Heading */
+  --heading-text-color: #999;
+  --heading-text-highlight-color: #ddd;
+
+  /* Primary */
+  --primary-color: #419bf9;
+  --primary-highlight-color: #338be4;
+  --primary-border-color: #2586e0;
+  --primary-bg-color: var(--primary-color);
+  --primary-fg-color: var(--page-bg-color);
+
+  /* Warning */
+  --warning-color: rgb(255, 236, 80);
+  --warning-highlight-color: rgb(255, 206, 65);
+  --warning-bg-border-color: rgb(255, 206, 65);
+  --warning-bg-color: var(--warning-color);
+  --warning-fg-color: black;
+
+  /* Success */
+  --success-color: rgb(76, 175, 80);
+  --success-highlight-color: rgb(42, 134, 45);
+  --success-bg-border-color: rgb(42, 134, 45);
+  --success-bg-color: var(--success-color);
+  --success-fg-color: var(--page-bg-color);;
+
+
+  /* Danger */
+  --danger-color: rgb(255, 95, 95);
+  --danger-highlight-color: rgb(212, 62, 28);
+  --danger-bg-color: var(--danger-color);
+  --danger-bg-border-color: rgb(212, 62, 28);
+  --danger-fg-color: var(--page-bg-color);;
+
+  /* secondary */
+  --secondary-color: #777;
+  --secondary-highlight-color: #888;
+  --secondary-bg-color: var(--secondary-color);
+  --secondary-border-color: #666;
+  --secondary-fg-color: var(--page-bg-color);;
+
+
+  /* Transparent */
+  --transparent-color: #eee;
+  --transparent-highlight-color: #ddd;
+  --transparent-border-color: black;
+  --transparent-bg-color: var(--transparent-color);
+  --danger-fg-color: black;
+
+
+  box-sizing: border-box;
+
+}
+
+.Theme-primary {
+  --text-color: var(--primary-bg-color);
+  --bg-color: var(--primary-bg-color);
+  --button-bg-color: var(--primary-bg-color);
+  --button-border-color: var(--primary-border-color);
+  --button-text-color: var(--primary-fg-color);
+  --button-bg-hover-color: var(--primary-bg-color);
+  --button-bg-active-color: var(--primary-highlight-color);
+  --button-bg-disabled-color: var(--primary-highlight-color);
+  --button-text-muted-color: var(--primary-fg-muted-color);
+  --button-text-disabled-color: var(--primary-fg-muted-color);
+  --input-text-color: var(--primary-fg-color);
+  --input-hover-color: var(--primary-bg-color);
+  --input-bg-color: var(--primary-highlight-color);
+  --input-border-color: var(--primary-border-color);
+  --input-placeholder-color: var(--primary-fg-muted-color);
+  --icon-color: var(--primary-fg-color);
+  --header-fg-color: var(--primary-fg-color);
+  --header-bg-color: var(--primary-highlight-color);
+  --alert-bg-color: var(--primary-bg-color);
+  --alert-text-color: var(--primary-fg-color);
+  --statusBoxBlock-bg-color: var(--primary-bg-color);
+  --card-bg-color: var(--primary-bg-color);
+  --modal-bg-color: var(--primary-bg-color);
+}
+
+.Theme-warning {
+  --text-color: var(--warning-bg-color);
+  --bg-color: var(--warning-bg-color);
+  --button-bg-color: var(--warning-bg-color);
+  --button-border-color: var(--warning-border-color);
+  --button-text-color: var(--warning-fg-color);
+  --button-bg-hover-color: var(--warning-bg-color);
+  --button-bg-active-color: var(--warning-highlight-color);
+  --button-bg-disabled-color: var(--warning-highlight-color);
+  --button-text-muted-color: var(--warning-fg-muted-color);
+  --button-text-disabled-color: var(--warning-fg-muted-color);
+  --input-text-color: var(--warning-fg-color);
+  --input-hover-color: var(--warning-bg-color);
+  --input-bg-color: var(--warning-highlight-color);
+  --input-border-color: var(--warning-border-color);
+  --input-placeholder-color: var(--warning-fg-muted-color);
+  --icon-color: var(--warning-fg-color);
+  --header-fg-color: var(--warning-fg-color);
+  --header-bg-color: var(--warning-highlight-color);
+  --alert-bg-color: var(--warning-fg-color);
+  --alert-bg-color: var(--warning-bg-color);
+  --alert-text-color: var(--warning-fg-color);
+  --statusBoxBlock-bg-color: var(--warning-bg-color);
+  --card-bg-color: var(--warning-bg-color);
+  --modal-bg-color: var(--warning-bg-color);
+}
+
+.Theme-success {
+  --text-color: var(--success-bg-color);
+  --bg-color: var(--success-bg-color);
+  --button-bg-color: var(--success-bg-color);
+  --button-border-color: var(--success-border-color);
+  --button-text-color: var(--success-fg-color);
+  --button-bg-hover-color: var(--success-bg-color);
+  --button-bg-active-color: var(--success-highlight-color);
+  --button-bg-disabled-color: var(--success-highlight-color);
+  --button-text-muted-color: var(--success-fg-muted-color);
+  --button-text-disabled-color: var(--success-fg-muted-color);
+  --input-text-color: var(--success-fg-color);
+  --input-hover-color: var(--success-bg-color);
+  --input-bg-color: var(--success-highlight-color);
+  --input-border-color: var(--success-border-color);
+  --input-placeholder-color: var(--success-fg-muted-color);
+  --icon-color: var(--success-fg-color);
+  --header-fg-color: var(--success-fg-color);
+  --header-bg-color: var(--success-highlight-color);
+  --alert-bg-color: var(--success-bg-color);
+  --alert-text-color: var(--success-fg-color);
+  --statusBoxBlock-bg-color: var(--success-bg-color);
+  --card-bg-color: var(--success-bg-color);
+  --modal-bg-color: var(--success-bg-color);
+}
+
+.Theme-danger {
+  --text-color: var(--danger-bg-color);
+  --bg-color: var(--danger-bg-color);
+  --button-bg-color: var(--danger-bg-color);
+  --button-border-color: var(--danger-border-color);
+  --button-text-color: var(--danger-fg-color);
+  --button-bg-hover-color: var(--danger-bg-color);
+  --button-bg-active-color: var(--danger-highlight-color);
+  --button-bg-disabled-color: var(--danger-highlight-color);
+  --button-text-muted-color: var(--danger-fg-muted-color);
+  --button-text-disabled-color: var(--danger-fg-muted-color);
+  --input-text-color: var(--danger-fg-color);
+  --input-hover-color: var(--danger-bg-color);
+  --input-bg-color: var(--danger-highlight-color);
+  --input-border-color: var(--danger-border-color);
+  --input-placeholder-color: var(--danger-fg-muted-color);
+  --icon-color: var(--danger-fg-color);
+  --header-fg-color: var(--danger-fg-color);
+  --header-bg-color: var(--danger-highlight-color);
+  --alert-bg-color: var(--danger-bg-color);
+  --alert-text-color: var(--danger-fg-color);
+  --statusBoxBlock-bg-color: var(--danger-bg-color);
+  --card-bg-color: var(--danger-bg-color);
+  --modal-bg-color: var(--danger-bg-color);
+
+}
+
+.Theme-secondary {
+  --text-color: var(--secondary-bg-color);
+  --bg-color: var(--secondary-bg-color);
+  --button-bg-color: var(--secondary-bg-color);
+  --button-border-color: var(--secondary-border-color);
+  --button-text-color: var(--secondary-fg-color);
+  --button-bg-hover-color: var(--secondary-bg-color);
+  --button-bg-active-color: var(--secondary-highlight-color);
+  --button-bg-disabled-color: var(--secondary-highlight-color);
+  --button-text-muted-color: var(--secondary-fg-muted-color);
+  --button-text-disabled-color: var(--secondary-fg-muted-color);
+  --input-text-color: var(--secondary-fg-color);
+  --input-bg-color: var(--secondary-highlight-color);
+  --input-hover-color: var(--secondary-bg-color);
+  --input-border-color: var(--secondary-border-color);
+  --input-placeholder-color: var(--secondary-fg-muted-color);
+  --icon-color: var(--secondary-fg-color);
+  --header-fg-color: var(--secondary-fg-color);
+  --header-bg-color: var(--secondary-highlight-color);
+  --tabitem-fg-color: var(--secondary-fg-color);
+  --alert-bg-color: var(--secondary-bg-color);
+  --alert-text-color: var(--secondary-fg-color);
+  --statusBoxBlock-bg-color: var(--secondary-bg-color);
+  --card-bg-color: var(--secondary-bg-color);
+  --modal-bg-color: var(--secondary-bg-color);
+}
+
+.Theme-transparent {
+  --text-color: var(--transparent-bg-color);
+  --bg-color: var(--transparent-bg-color);
+  --button-bg-color: var(--transparent-bg-color);
+  --button-border-color: var(--transparent-border-color);
+  --button-text-color: var(--transparent-fg-color);
+  --button-bg-hover-color: var(--transparent-bg-color);
+  --button-bg-active-color: var(--transparent-highlight-color);
+  --button-bg-disabled-color: var(--transparent-highlight-color);
+  --button-text-muted-color: var(--transparent-fg-muted-color);
+  --button-text-disabled-color: var(--transparent-fg-muted-color);
+  --input-text-color: var(--transparent-fg-color);
+  --input-bg-color: var(--transparent-highlight-color);
+  --input-hover-color: var(--transparent-bg-color);
+  --input-border-color: var(--transparent-border-color);
+  --input-placeholder-color: var(--transparent-fg-muted-color);
+  --icon-color: var(--transparent-fg-color);
+  --header-fg-color: var(--transparent-fg-color);
+  --header-bg-color: var(--transparent-highlight-color);
+  --alert-bg-color: var(--transparent-bg-color);
+  --alert-text-color: var(--transparent-fg-color);
+  --statusBoxBlock-bg-color: var(--transparent-bg-color);
+  --card-bg-color: var(--page-bg-color);
+  --modal-bg-color: var(--transparent-bg-color);
+
+}
+
+a {
+  color: #ccc;
+}
