@@ -20,7 +20,9 @@ export default class ItemCard extends Component {
     }
 
     render() {
-        const { data, theme, index, id, dataId } = this.props;
+        const { data, index, id, dataId } = this.props;
+        let { theme } = this.props;
+        theme = data.list === 'done' ? 'success' : theme;
         return(
             <div className={`itemCard Theme-${theme}`} id={id}
             data-id={dataId} draggable="true" onDragStart={this.drag}
@@ -30,7 +32,10 @@ export default class ItemCard extends Component {
                 <div className="item-label" style={{lineHeight: '2rem'}}>Desc: {data.desc}</div>
                 <div className="item-label">Priority: {data.priority}</div>
                 <div className="edit-icon-wrapper">
+                {
+                    data.list !== 'done' &&
                     <div onClick={this.openModal.bind(this, index, data.list)}><Edit theme="transparent" /></div>
+                }
                     <div onClick={this.deleteItem.bind(this, index, data.list)}><Wrong theme="transparent" /></div>
                 </div>
             </div>
