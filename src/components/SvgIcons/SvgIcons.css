@@ -1,5 +1,6 @@
 .SvgIcons {
     fill: var(--icon-color);
+    cursor: pointer;
   }
 
   .SvgIcons-filled {
